@@ -33,10 +33,10 @@ import net.runelite.client.config.ConfigItem;
 public interface ChatNotificationsConfig extends Config
 {
 	@ConfigItem(
-		position = 0,
-		keyName = "highlightOwnName",
-		name = "Highlight own name",
-		description = "Highlights any instance of your username in chat"
+			position = 0,
+			keyName = "highlightOwnName",
+			name = "Highlight own name",
+			description = "Highlights any instance of your username in chat"
 	)
 	default boolean highlightOwnName()
 	{
@@ -44,10 +44,10 @@ public interface ChatNotificationsConfig extends Config
 	}
 
 	@ConfigItem(
-		position = 1,
-		keyName = "highlightWordsString",
-		name = "Highlight words",
-		description = "Highlights the following words in chat"
+			position = 1,
+			keyName = "highlightWordsString",
+			name = "Highlight words",
+			description = "Highlights the following words in chat"
 	)
 	default String highlightWordsString()
 	{
@@ -55,10 +55,10 @@ public interface ChatNotificationsConfig extends Config
 	}
 
 	@ConfigItem(
-		position = 2,
-		keyName = "notifyOnOwnName",
-		name = "Notify on own name",
-		description = "Notifies you whenever your name is mentioned"
+			position = 2,
+			keyName = "notifyOnOwnName",
+			name = "Notify on own name",
+			description = "Notifies you whenever your name is mentioned"
 	)
 	default boolean notifyOnOwnName()
 	{
@@ -66,10 +66,10 @@ public interface ChatNotificationsConfig extends Config
 	}
 
 	@ConfigItem(
-		position = 3,
-		keyName = "notifyOnHighlight",
-		name = "Notify on highlight",
-		description = "Notifies you whenever a highlighted word is matched"
+			position = 3,
+			keyName = "notifyOnHighlight",
+			name = "Notify on highlight",
+			description = "Notifies you whenever a highlighted word is matched"
 	)
 	default boolean notifyOnHighlight()
 	{
@@ -77,10 +77,10 @@ public interface ChatNotificationsConfig extends Config
 	}
 
 	@ConfigItem(
-		position = 4,
-		keyName = "notifyOnTrade",
-		name = "Notify on trade",
-		description = "Notifies you whenever you are traded"
+			position = 4,
+			keyName = "notifyOnTrade",
+			name = "Notify on trade",
+			description = "Notifies you whenever you are traded"
 	)
 	default boolean notifyOnTrade()
 	{
@@ -88,12 +88,23 @@ public interface ChatNotificationsConfig extends Config
 	}
 
 	@ConfigItem(
-		position = 5,
-		keyName = "notifyOnDuel",
-		name = "Notify on duel",
-		description = "Notifies you whenever you are challenged to a duel"
+			position = 5,
+			keyName = "notifyOnDuel",
+			name = "Notify on duel",
+			description = "Notifies you whenever you are challenged to a duel"
 	)
 	default boolean notifyOnDuel()
+	{
+		return false;
+	}
+
+	@ConfigItem(
+			position = 6,
+			keyName = "notifyOnPm",
+			name = "Notify on private messsage",
+			description = "Notifies you whenever a private message was received"
+	)
+	default boolean notifyOnPm()
 	{
 		return false;
 	}
